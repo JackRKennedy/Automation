@@ -16,8 +16,8 @@ def organise_downloads(directory: str) -> None:
                   'Audio': ['.mp3', '.wav', '.ogg', '.flac'],
                   'Web': ['.html', '.htm', '.css', '.js'],
                   'Data': ['.csv', '.xml', '.json', '.yml', '.yaml'],
-                  'Programming': ['.py', '.java', '.c', '.cpp', '.js', '.rb', '.go', '.php', '.cs', '.r'],
-                  'Executable': ['.exe', '.app', '.bin', '.jar', '.sh'],
+                  'Programming': ['.py', '.java', '.c', '.cpp', '.js', '.rb', '.go', '.php', '.cs', '.r', '.db', '.sqlite'],
+                  'Executable': ['.exe', '.app', '.bin', '.jar', '.sh', '.dmg'],
                   'Archives': ['.zip', '.rar', '.tar', '.gz', '.gzip', '.7z'],
                   }
     # for all files in the list (downloads dir)
@@ -36,5 +36,5 @@ def organise_downloads(directory: str) -> None:
 
 # Main -> add a cron job in terminal to make this run automatically
 if __name__ == '__main__':
-    download_dir: str = '/Users/jackkennedy/Downloads'
+    download_dir: str = '/Users/jackkennedy/Downloads/'
     organise_downloads(download_dir)
