@@ -34,6 +34,7 @@ def organise_downloads(directory: str) -> None:
                     break
 
 
+# Main -> add a cron job in terminal to make this run automatically
 if __name__ == '__main__':
     download_dir: str = '/Users/jackkennedy/Downloads'
     organise_downloads(download_dir)
