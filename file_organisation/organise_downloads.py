@@ -72,3 +72,5 @@ if __name__ == '__main__':
     organise_downloads(download_dir)
 
     logging.info('Finished organizing downloads')
+
+    # I have copied this to my path so it can be executable anywhere
