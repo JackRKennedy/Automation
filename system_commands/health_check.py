@@ -38,13 +38,17 @@ def purge_memory() -> None:
     os.system('sudo purge')
 
 
-def check_temp() -> None:
-    """Check system temperature."""
-    temp = psutil.sensors_temperatures(fahrenheit=False)
-    for component in temp:
-        for element in temp[component]:
-            print(f"{component}\t\t{element.current}°C")
-
+# def check_temp() -> None:
+#     """Check system temperature."""
+#     temps = psutil.sensors_temperatures(fahrenheit=False)
+#     if not temps:
+#         print("No temperature sensors found!")
+#         return
+#
+#     for component, entries in temps.items():
+#         for entry in entries:
+#             print(f"{component}\t\t{entry.current}°C")
+# TODO: look up other ways of implementing this functionality, it doesn't seem to work on macOS
 
 def check_memory_usage() -> None:
     """Print the current memory usage of the system."""
@@ -77,7 +81,7 @@ if __name__ == "__main__":
     else:
         print("Everything seems to be working fine!")
     purge_memory()
-    check_temp()
+    # check_temp()
     check_memory_usage()
     clean_temp_files()
     kill_zombie_processes()
